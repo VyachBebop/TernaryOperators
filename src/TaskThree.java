@@ -14,8 +14,9 @@ public class TaskThree
         System.out.println("Enter the number: ");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        String answer = (number % 2 != 0 && number % 5 != 0) && (number % 3 != 0 && number % 7 != 0)
-        ? "The number " + number + " is not divisible.": "The number " + number + " is divisible.";
+        String answer = ((number % 2 == 0 && number % 5 == 0) || (number % 3 == 0 && number % 7 == 0))
+        ? "The number " + number + " is divisible."
+        : "The number " + number + " is not divisible.";
         System.out.println(answer);
     }
 }
